@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <title>Formulario Registro</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <link rel="icon" type="image/x-icon" href=".\img\favicon.jpeg">
+</head>
+
+<body>
+  <header>
+    <img class="logo" src=".\img\ERM_SVG.svg" alt="logo" />
+  </header>
+
+  <div class="banner">
+    <div class="banner-text">
+      <h1>Eternal Race Mexico</h1>
+      <p>08 de Enero de 2022</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="content-section">
+        <div class="title">
+          <h1>
+            Eternal Race Mexico dos distintos trayectos y
+            una sola meta.
+          </h1>
+
+        </div>
+
+        <div class="content">
+          <h2 id="ubicacion">Ubicación:<br> Nevado de Toluca- Cacalomacán, Estado de México</h2>
+          <h2 id="fecha">Fecha:<br> 08 de Enero de 2022</h2>
+          <p>
+            ERM tendrá como sede el poblado de Cacalomacán, ubicado en la zona
+            de Toluca Estado de México más cercana a las laderas del Volcan Xinantécatl, un pulmón lleno de vida que
+            disfrutaremos en ambas carreras.
+          </p>
+          <h2>Trail Running.</h2>
+          <p>
+            Dará inicio a las 8:00 AM en las instalaciones de El Rancho “El
+            Castillo” con dirección hacia el imponente Nevado de Toluca, un
+            trayecto abierto y cada vez más inclinado, en el que pondrás a
+            prueba tus límites, una vez internado en la zona boscosa
+            continuarás por caminos y paisajes imponentes alrededor del Parque
+            Ecoturístico de Cacalomacán, cuestas, descensos, raíces y piedras
+            mantendrán alerta tus emociones, un descenso largo que te llevará
+            de regreso a la zona de meta donde podrás disfrutar con tu familia
+            y amigos compartiendo la increíble experiencia.
+          </p>
+
+          <h2>Avalanche MTB.</h2>
+
+          <p>
+            El Nevado de Toluca y sus parajes será el ingrediente esencial de
+            este increíble descenso, la cita es en el parque de los venados,
+            donde te espera un módulo de acceso para iniciar el ascenso a esta
+            gran aventura, contaremos con lift o transportación para ti y tu
+            bicicleta desde el parque de los venados hacia la parte alta del
+            nevado, el banderazo de arranque será a las 9:30 AM al estilo
+            “Avalanche”, comenzando con un veloz y pedregoso descenso marcado
+            que te dirige hacia la zona boscosa encontrando un trail cada vez
+            más angosto y sinuoso, pasando por terrenos arenosos y llenos de
+            piedra, raices, zonas técnicas y de mucho flow, trazo totalmente
+            natural con escasos ascensos donde la condición física y pericia
+            será fundamental, el terreno será variable, apto para los más
+            experimentados e intermedios mountain bikers, casi para finalizar
+            disfrutarás de fluidos trails al adentrarte en el parque
+            Ecoturístico de Cacalomacán, el ritmo de carrera lo determinas tú,
+            lo más importante es llegar a la meta.
+          </p>
+
+          <h2>La meta.</h2>
+
+          <p>
+            Amplio espacio abierto donde podrás disfrutar de un increíble
+            ambiente, música, stands de tus marcas y productos favoritos, área
+            de comida, circuito infantil para bicicletas, estacionamiento,
+            planeado para ser un evento 100% familiar.
+          </p>
+        </div>
+      </div>
+      <div class="form-content">
+        <div class="form-register">
+          <h1>Formato de Inscripcion</h1>
+          <h4>Por favor llena los siguientes campos.</h4>
+          <form action="http://localhost:8080/checkout" onsubmit="return submitUserForm();" method="post"
+            id="form-checkout">
+            <label class="labels">Nombre / Name.</label>
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required />
+            <label class="labels">Apellidos / Lastname.</label>
+            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido"
+              required />
+            <label class="labels">Email.</label>
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required />
+            <label class="labels">Edad / Age.</label>
+            <select class="controls" name="edad" id="edad" required>
+              <option value="menor17">17 años o menos</option>
+              <option value="18a21">18-21 años</option>
+              <option value="22a39">22-39 años</option>
+              <option value="40a49">40-49 años</option>
+              <option value="mas50">50 años o más</option>
+            </select>
+            <label class="labels">Fecha de Nacimiento / Date of Birth.</label>
+            <input class="controls" type="date" name="fechaNacimiento" id="fechaNacimiento" required />
+            <label class="labels">Genero / Genre.</label>
+            <select class="controls" name="genero" id="genero" required>
+              <option value="masculino">Masculino</option>
+              <option value="femenino">Femenino</option>
+            </select>
+            <label class="labels">Pais / Country.</label>
+            <input class="controls" type="text" name="pais" id="pais" placeholder="Ingrese su pais" required />
+            <label class="labels">Telefono / Phone Number.</label>
+            <input class="controls" type="text" name="telefono" id="telefono" placeholder="Ingrese su telefono"
+              required />
+            <label class="labels">Contacto de Emergencia / Emergency phone number.</label>
+            <input class="controls" type="text" name="contactoEmerg" id="contactoEmerg"
+              placeholder="Ingrese su contacto" required />
+            <label class="labels">Nombre del Equipo / Team Name.</label>
+            <input class="controls" type="text" name="nombreEquipo" id="nombreEquipo"
+              placeholder="Ingrese el nombre de su equipo"/>
+            <label class="labels">Tipo de sangre / Blood Type.</label>
+            <select class="controls" name="tipoSangre" id="tipoSangre" required>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+            </select>
+            <label class="labels">Talla jersey / Jersey size.</label>
+            <select class="controls" name="talla" id="talla" required>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <label class="labels">Marca de bicicleta / Bike Manufacter. (En caso de competir en modalidad Avalanche
+              MTB)</label>
+            <input class="controls" type="text" name="marcaBici" id="marcaBici" placeholder="Ingrese la marca"
+               />
+            <label class="labels">Modelo/Model.</label>
+            <input class="controls" type="text" name="modelo" id="modelo" placeholder="Ingrese su modelo" />
+            <label class="labels">Año / Year</label>
+            <input class="controls" type="text" name="ano" id="ano" placeholder="Ingrese el año"  />
+            <label class="labels">Rodada / Wheel size.</label>
+            <input class="controls" type="text" name="rodada" id="rodada" placeholder="Ingrese la rodada"/>
+
+            <label class="labels">Alergias / Allergies.</label>
+            <input class="controls" type="text" name="alergias" id="alergias" placeholder="Ingrese sus alergias"
+              />
+
+            <label class="section-divider">Seleccione el tipo de boleto/Select your ticket</label>
+            <div class="ticket-section">
+              <input type="radio" id="AvalonMTV" name="tickets" value="696" checked />
+              <label class="ticket" for="avalon">Avalance MTB [$600 + cargos por servicio]</label>
+            </div>
+
+            <div class="ticket-section">
+              <input type="radio" id="TrailRunning" name="tickets" value="464" checked />
+              <label class="ticket" for="trail">Trail running [$400 + cargos por servicio]</label>
+            </div>
+
+
+            <label class="section-divider">Terminos y condiciones/ Terms and conditions</label>
+            <div class="ticket-section">
+              <input type="radio" id="terms" name="terms" value="accepted" unchecked required />
+              <label class="ticket" for="terms"> <a href="terminos-condiciones.html">He leido y acepto los terminos y condiciones       </a></label>
+            </div>
+
+            <div class="ticket-section">
+              <input type="radio" id="privacy" name="privacy" value="accepted" unchecked required />
+              <label class="ticket" for="privacy"> <a href="privacy.html"> Aviso de privacidad </a></label>
+            </div>
+
+            <div class="ticket-section">
+              <input type="radio" id="responsal" name="responsal" value="accepted" unchecked required />
+              <label class="ticket" for="responsal"><a a href="exoneracion.html">Acepto exclusión de responsabilidad por parte de la empresa.</a></label>
+            </div>
+              <label class="labels">Cupon</label>
+              <input class="controls" type="text" name="cupon" id="cupon" placeholder="Si cuenta con un cupon ingreselo aquí."/>
+
+            
+            
+            <!--
+<div class="g-recaptcha" data-sitekey="6LfuVHMdAAAAAKOBBJ8GjLA4D18vKPxMjxD2Puny"
+              data-callback="verifyCaptcha"></div>
+            <div id="g-recaptcha-error"></div>
+
+
+            -->
+            
+
+
+
+            <input id="submit" class="botons" onclick="validate()" type="submit" value="Enviar" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+
+  <script>
+    const mp = new MercadoPago("");
+  </script>
+
+  <script>
+    var recaptcha_response = "";
+    function submitUserForm() {
+      if (recaptcha_response.length == 0) {
+        document.getElementById("g-recaptcha-error").innerHTML =
+          '<span style="color:red;">This field is required.</span>';
+        return false;
+      }
+      return true;
+    }
+
+    function verifyCaptcha(token) {
+      recaptcha_response = token;
+      document.getElementById("g-recaptcha-error").innerHTML = "";
+    }
+  </script>
+
+  <script>
+    function validate() {
+      var ddl = document.getElementById("edad");
+      var selectedValue = ddl.options[ddl.selectedIndex].value;
+      if (selectedValue == "menor17") {
+        alert("En caso de menores de edad, sus padres deben de firmar una responsiva.");
+      }
+    }
+
+  </script>
+  
+  
+
+
+
+  <footer class="footer">
+    <div class="containerFoot">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Compañia</h4>
+          <ul>
+            <li><a href="exoneracion.html">Extensión de responsabilidad.</a></li>
+            <li><a href="terminos-condiciones.html">Terminos y condiciones.</a></li>
+            <li><a href="privacy.html">Politica de privacidad.</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Tienda</h4>
+          <ul>
+            <li><a href="index.html">Entradas</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Siguenos</h4>
+          <div class="social-links">
+            <a href="https://www.facebook.com/eternalsracemexico"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/eternalsracemexico"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCbcKd_m8ihQrSZh7G8ZQNYw"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
